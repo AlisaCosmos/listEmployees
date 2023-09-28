@@ -1,8 +1,12 @@
 .userCardField {
-  color: red;
   &__inner {
     height: 25px;
   }
   &__content {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    column-gap: 5px;
   }
 }
