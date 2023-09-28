@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as cx from 'classnames';
 import { setIsOpenPopup } from '../../redux/slices/popupSlice';
 import './PopUp.scss';
-//import { Children } from 'react';
 
 export default function PopUp(props) {
   const { isOpenPopup } = useSelector((state) => state.isOpenPopup);

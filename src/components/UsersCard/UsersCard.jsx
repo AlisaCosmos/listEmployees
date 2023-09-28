@@ -1,6 +1,6 @@
 import './UsersCard.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { setIsOpenPopup } from '../../redux/slices/popupSlice';
+import { setDataPopup, setIsOpenPopup } from '../../redux/slices/popupSlice';
 import UserCardAvatar from '../UserCardAvatar/UserCardAvatar';
 import UserCardList from '../UserCardList/UserCardList';
 
@@ -9,6 +9,7 @@ export default function UsersCard({ data }) {
   const { isOpenPopup } = useSelector((state) => state.isOpenPopup);
   const onClickUserCard = () => {
     dispatch(setIsOpenPopup(!isOpenPopup));
+    dispatch(setDataPopup(data));
   };
 
   return (

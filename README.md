@@ -16,3 +16,4 @@ https://list-employees-seven.vercel.app/
 
 - для запроса используется axios;
 - асинхронные экшены в Redux Toolkit (createAsyncThunk);
+- отображение подробной информации о пользователе, при клике на карточку пользователя;
