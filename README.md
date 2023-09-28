@@ -1,6 +1,6 @@
 ## Демо
 
-https://vercel.com/alisacosmos/list-employees
+https://list-employees-seven.vercel.app/
 
 ## Стек
 
@@ -12,7 +12,7 @@ https://vercel.com/alisacosmos/list-employees
 - AJAX;
 - Prettier;
 
-## Реализованно
+## Реализовано
 
 - для запроса используется axios;
 - асинхронные экшены в Redux Toolkit (createAsyncThunk);
