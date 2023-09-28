@@ -1,0 +1,39 @@
+// @import './libs/normalize';
+@import 'vars';
+@import 'fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $mainFonts;
+  background-color: $bgColors;
+  color: $fontsColors;
+}
+main {
+  flex: 1 0 auto;
+}
+h1 {
+  color: $fontsColors;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.container__row {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 130px;
+}
+.container__row_wide {
+  // для хедера
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 24px;
+}
