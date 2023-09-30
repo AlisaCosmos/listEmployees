@@ -1,0 +1,69 @@
+@import '../../styles/vars';
+
+.dropdown {
+  margin-top: 20px;
+  width: 400px;
+  position: relative;
+  font-family: $mainFonts;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $fontsColors;
+  display: flex;
+  align-items: center;
+  &__svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 11px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__svg_open {
+    transform: rotate(180deg);
+  }
+  &__input {
+    width: 100%;
+    height: 50px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: $formColors;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $fontsColors;
+      opacity: 1;
+    }
+    &::-webkit-input-placeholder {
+      color: $fontsColors;
+    }
+    &::-moz-placeholder {
+      color: $fontsColors;
+    }
+
+    &:hover {
+      background-color: $formColorsHover;
+      //transition: $transition;
+      &::placeholder {
+        color: $fontsFormColorsHover;
+      }
+    }
+    &:focus {
+      outline: none;
+      background-color: $formColors;
+    }
+  }
+  &__panel {
+    position: absolute;
+    top: 55px;
+    width: 400px;
+    padding: 10px 16px;
+    background: $formColors;
+    color: $fontsColors;
+    border-radius: 10px;
+  }
+}

@@ -1,20 +1,22 @@
 @import '../../styles/vars';
 
 .usersSelect {
-  margin-top: 20px;
-  select {
-    appearance: none;
-    /* safari */
-    -webkit-appearance: none;
-    /* other styles for aesthetics */
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 20px;
-    width: 400px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 10px;
-    background: $formColors;
-    cursor: pointer;
+  .multiselect {
   }
+  // margin-top: 20px;
+  // select {
+  //   appearance: none;
+  //   /* safari */
+  //   -webkit-appearance: none;
+  //   /* other styles for aesthetics */
+  //   font-size: 12px;
+  //   font-weight: 700;
+  //   line-height: 20px;
+  //   width: 400px;
+  //   padding: 10px 16px;
+  //   border: none;
+  //   border-radius: 10px;
+  //   background: $formColors;
+  //   cursor: pointer;
+  // }
 }

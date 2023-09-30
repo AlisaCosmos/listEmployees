@@ -26,7 +26,7 @@ export default function UserCardListExtended({ data }) {
       {' '}
       {usersCardList?.map((obj, i) => {
         return (
-          <UserCardField>
+          <UserCardField key={i}>
             <div className="userCardList__field_img">
               <img src={`${obj.svg}`} alt="svg" />
             </div>
