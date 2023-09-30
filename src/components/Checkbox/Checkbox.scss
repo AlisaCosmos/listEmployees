@@ -1,10 +1,11 @@
 .checkbox {
   &__wrapper {
     display: flex;
-
-    //height: 40px;
     column-gap: 10px;
     padding: 10px 16px;
+    &:hover {
+      background: #7b7b7b;
+    }
   }
   &__input {
     position: absolute;
