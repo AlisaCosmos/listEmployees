@@ -2,12 +2,9 @@ import './Checkbox.scss';
 import { ReactComponent as Mark } from '../../assets/imgs/mark.svg';
 import * as cx from 'classnames';
 
-import { useSelector } from 'react-redux';
-
 export default function Checkbox({ obj, selectedUser, setselectedUser }) {
-  console.log(selectedUser, ' selectedUser Checkbox');
+  //console.log(selectedUser, ' selectedUser Checkbox');
   const { id, name, username } = obj;
-  const { users } = useSelector((state) => state.users);
 
   return (
     // className={selectedUser.username ? 'checkbox active' : 'checkbox'}

@@ -4,25 +4,22 @@ import { ReactComponent as Arrow } from '../../assets/imgs/arrow.svg';
 import './Dropdown.scss';
 import Checkbox from '../Checkbox/Checkbox';
 import { useDispatch, useSelector } from 'react-redux';
-import DropdownInfoPanel from '../DropdownInfoPanel/DropdownInfoPanel';
 import { setNumberOfUsersSelected, setSelectedUserName } from '../../redux/slices/dropdownSlise';
-import { setIsOpenPopup } from '../../redux/slices/popupSlice';
+import { setSearchValue } from '../../redux/slices/filtersSlice';
 
 export default function Dropdown() {
   const { users } = useSelector((state) => state.users);
+  const { searchValue } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
   //const { numberOfUsersSelected } = useSelector((state) => state.dopdown);
-  console.log('users dopdown=', users);
+  console.log('searchValue', searchValue);
 
   const [selectedUser, setselectedUser] = useState(
     users.reduce((result, user) => ({ ...result, [user.username]: false }), {}),
   );
 
-  dispatch(setSelectedUserName(Object.keys(selectedUser)));
-  const { username } = selectedUser;
-  console.log(username, 'username');
-  console.log(selectedUser, 'selectedUser 1 ');
   dispatch(setNumberOfUsersSelected(Object.values(selectedUser).filter(Boolean).length));
+  dispatch(setSelectedUserName(Object.keys(selectedUser).filter(Boolean)));
   //console.log(numberOfUsersSelected, 'numberOfUsersSelected');
 
   const [isDropdownDisplayed, setDropdownDisplayed] = useState(false);
@@ -69,7 +66,10 @@ export default function Dropdown() {
         onMouseLeave={handleMouseLeave}
         className="dropdown__input"
         placeholder={isHover ? 'Enter a name' : 'Select name'}
-        value=""
+        value={searchValue}
+        onChange={(event) => {
+          dispatch(setSearchValue(event.target.value));
+        }}
         onClick={(e) => {
           e.stopPropagation();
           setDropdownDisplayed(!isDropdownDisplayed);

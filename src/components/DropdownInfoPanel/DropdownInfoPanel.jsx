@@ -1,7 +1,10 @@
 import { useSelector } from 'react-redux';
 import './DropdownInfoPanel.scss';
 export default function DropdownInfoPanel() {
-  const { numberOfUsersSelected, selectedUserName } = useSelector((state) => state.dropdown);
+  const { numberOfUsersSelected, selectedUserName, selectedUsers } = useSelector(
+    (state) => state.dropdown,
+  );
+  //console.log('selectedUserName', selectedUserName);
   // отчиска
   const onClickClear = () => {
     console.log('clear all');

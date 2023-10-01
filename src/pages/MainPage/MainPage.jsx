@@ -5,9 +5,11 @@ import UserCardPopUp from '../../components/UserCardPopUp/UserCardPopUp';
 import PopUp from '../../components/PopUp/PopUp';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import DropdownInfoPanel from '../../components/DropdownInfoPanel/DropdownInfoPanel';
+import { useState } from 'react';
 
 export default function MainPage() {
   const { isOpenPopup } = useSelector((state) => state.isOpenPopup);
+
   return (
     <div className="mainPage container__row">
       <Dropdown />
